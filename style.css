@@ -6,9 +6,9 @@ html {
     color:#828282;
     height: 100%;
 }
-	
-#main {	
-    background-color: transparent;	
+
+#main {
+    background-color: transparent;
 }
 
 body,div,dl,dt,dd,ul,ol,li,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td {
@@ -27,7 +27,7 @@ address,caption,cite,code,dfn,em,strong,th,var,optgroup {
 
 li {
 	list-style:none;
-	
+
 	font-size: 12px;
 	letter-spacing: .06em;
 	}
@@ -46,10 +46,10 @@ h1,h2,h3,h4,h5,h6 {
 q:before,q:after {
 	content:'';
 	}
-	
+
 body {
 	font-family: courier, fixed-width;
-	
+
 	}
 
 img {
@@ -58,17 +58,17 @@ img {
 
 ul {
 	line-height: 22px;
-	}	
-	
+	}
+
 #nav h1 {
 	width: 270px;
 	}
 
-#content { 
+#content {
 	position: absolute;
 	left: 300px;
 	top: 50px;
-	
+
 	}
 
 img {
@@ -78,7 +78,7 @@ img {
 h1 {
 	font-family: courier, fixed-width;
 	letter-spacing: .06em;
-	
+
 	margin-bottom: 10px;
 	font-size: 12px;
 	margin-top: 40px;
@@ -90,16 +90,16 @@ h1 {
 	padding-bottom: 30px;
 	margin-left: 40px;
 	}
-	
+
 #caption {
 	padding-left: 50px;
 	}
 
 a:link {
-	color: #828282; 
+	color: #828282;
 	text-decoration: none;
-	
-	}     
+
+	}
 
 a:visited {
 	color: #828282;
@@ -107,16 +107,16 @@ a:visited {
 	}
 
 a:hover {
-	color: #828282; 
+	color: #828282;
 	text-decoration: underline;
-	}   
+	}
 
 h1 a:link {
 	color: black;
 	}
-	
+
 h1 a:hover {
-	
+
 	text-decoration: none;
 	}
 h1 a:visited {
@@ -130,7 +130,7 @@ h1 a:visited {
 	font-family: arial, sans-serif;
 	letter-spacing: .03em;
 	font-size: 9.5px;
-	color: #C9C9C9; 
+	color: #C9C9C9;
 	}
 
 .pronunciation {
@@ -138,7 +138,7 @@ h1 a:visited {
 	font-family: arial, sans-serif;
 	letter-spacing: .03em;
 	font-size: 9.5px;
-	color: #C9C9C9; 
+	color: #C9C9C9;
 	}
 
 #peace {
@@ -153,7 +153,7 @@ letter-spacing: .06em;
 	}
 
 #general h3 {
-	display: inline; 
+	display: inline;
 	font-size: 12px;
 	margin-right: 10px;
 	}
@@ -161,39 +161,39 @@ letter-spacing: .06em;
 #general h3 a:link {
 	height: 15px;
 	text-decoration: none;
-	}	
-		
+	}
+
 .nav-content {
 	margin-left: 40px;
 	}
-	
+
 .info-content {
 	margin-left: 120px;
 	width: 500px;
 	}
-	
+
 .contact-content {
 	margin-left: 170px;
 	}
-	
+
 body#airia li#airia-a, body#io li#io-a, body#sprinkler li#sprinkler-a, body#windsor li#windsor-a, body#windsor-settee li#windsor-settee-a, body#farm-table li#farm-table-a, body#flashlight li#flashlight-a, body#pressure-pitcher li#pressure-pitcher-a, body#flower li#flower-a, body#arch-chair li#arch-chair-a {
 	text-decoration: underline;
-	
+
 	}
-body#airia h3#projects-a, body#io h3#projects-a, body#sprinkler h3#projects-a, body#windsor h3#projects-a, body#windsor-settee h3#projects-a, body#farm-table h3#projects-a, body#flashlight h3#projects-a, body#pressure-pitcher h3#projects-a, body#flower h3#projects-a, body#arch-chair h3#projects-a  {	
+body#airia h3#projects-a, body#io h3#projects-a, body#sprinkler h3#projects-a, body#windsor h3#projects-a, body#windsor-settee h3#projects-a, body#farm-table h3#projects-a, body#flashlight h3#projects-a, body#pressure-pitcher h3#projects-a, body#flower h3#projects-a, body#arch-chair h3#projects-a  {
 	text-decoration: underline;
 	}
 
 body#projects h3#projects-a, body#info h3#info-a {
 	text-decoration: underline;
-	}	
+	}
 
 body#info p {
 	margin-bottom: 20px;
 	}
-		
+
 #general h3 a:hover {
 	background: #1d1d1d;
 	color: white;
 	text-decoration: none;
-	}		
+	}
