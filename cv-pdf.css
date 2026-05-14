@@ -5,7 +5,7 @@
 	position: relative;
 	left: auto;
 	top: auto;
-	margin: 12px auto 32px auto;
+	margin: 12px auto 12px auto;
 	/* Wider than A4@96dpi → fewer wraps → less vertical height */
 	width: 960px;
 	max-width: 960px;
@@ -44,8 +44,37 @@
 
 #cv-pdf-root .cv-pdf-header p {
 	margin: 0;
-	font-size: 13px;
+	font-size: 16px;
+	line-height: 1.25;
 	color: #333;
+}
+
+/* Contact (same layout as site; tuned for print width) */
+#cv-pdf-root .contact-with-photo {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+#cv-pdf-root .contact-text-col {
+	flex: 1;
+	min-width: 0;
+}
+
+#cv-pdf-root .contact-photo-col {
+	flex: 0 0 auto;
+}
+
+#cv-pdf-root .contact-profile-photo {
+	display: block;
+	width: 156px;
+	height: 156px;
+	max-width: 156px;
+	object-fit: cover;
+	object-position: center center;
+	border-radius: 3px;
 }
 
 #cv-pdf-root .cv-pdf-chapter {

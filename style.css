@@ -90,6 +90,7 @@ h3 {
 }
 
 /* current page (body.cv-* set per HTML file) */
+body.cv-contact #general h3 a[href="contact.html"],
 body.cv-about #general h3 a[href="about.html"],
 body.cv-achievements #general h3 a[href="achievements.html"],
 body.cv-skills #general h3 a[href="skills.html"],
@@ -144,6 +145,44 @@ h1 a:hover {
 		max-width: calc(100vw - 40px);
 		padding-right: 16px;
 	}
+
+	.info-content .contact-with-photo {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.info-content .contact-photo-col {
+		align-self: center;
+		margin-top: 12px;
+	}
+}
+
+/* --- contact page: text left, photo right --- */
+.info-content .contact-with-photo {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+.info-content .contact-text-col {
+	flex: 1;
+	min-width: 0;
+}
+
+.info-content .contact-photo-col {
+	flex: 0 0 auto;
+}
+
+.info-content .contact-profile-photo {
+	display: block;
+	width: 168px;
+	height: 168px;
+	max-width: 168px;
+	object-fit: cover;
+	object-position: center center;
+	border-radius: 3px;
 }
 
 /* --- shared CV section titles (page lead headings) --- */
