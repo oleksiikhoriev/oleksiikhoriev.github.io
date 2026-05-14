@@ -256,9 +256,26 @@
     return n > 10;
   }
 
+  function getStatusEl() {
+    var el = document.getElementById("cv-pdf-status");
+    if (el) {
+      return el;
+    }
+    el = document.createElement("p");
+    el.id = "cv-pdf-status";
+    el.setAttribute("role", "status");
+    el.setAttribute("aria-live", "polite");
+    el.className = "cv-pdf-status-bar";
+    document.body.appendChild(el);
+    return el;
+  }
+
   function runPdfDownload() {
-    var statusEl = document.getElementById("cv-pdf-status");
-    var btn = document.getElementById("cv-pdf-download");
+    var statusEl = getStatusEl();
+    var btn = document.getElementById("cv-pdf-nav-trigger");
+    if (!btn) {
+      return;
+    }
 
     if (typeof html2canvas === "undefined") {
       statusEl.textContent = "html2canvas failed to load. Check network / ad-blocker.";
@@ -310,7 +327,9 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
-    var btn = document.getElementById("cv-pdf-download");
-    if (btn) btn.addEventListener("click", runPdfDownload);
+    var btn = document.getElementById("cv-pdf-nav-trigger");
+    if (btn) {
+      btn.addEventListener("click", runPdfDownload);
+    }
   });
 })();

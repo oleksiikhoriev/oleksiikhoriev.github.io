@@ -166,42 +166,24 @@
 	margin-bottom: 0;
 }
 
-/* UI on cv.html */
-.cv-pdf-ui {
-	margin-top: 8px;
-}
-
-.cv-pdf-ui #cv-pdf-download {
-	margin-top: 12px;
-	padding: 8px 14px;
+/* PDF build status (any page; element may be created by cv-pdf.js) */
+#cv-pdf-status.cv-pdf-status-bar {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9999;
+	margin: 0;
+	padding: 10px 16px;
 	font-family: courier, fixed-width, monospace;
 	font-size: 12px;
-	cursor: pointer;
-	border: 1px solid #828282;
-	background: #fff;
+	line-height: 1.35;
 	color: #111;
+	background: rgba(255, 255, 255, 0.97);
+	border-top: 1px solid #bababa;
+	box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.07);
 }
 
-.cv-pdf-ui #cv-pdf-download:hover:not(:disabled) {
-	background: #1d1d1d;
-	color: #fff;
-	border-color: #1d1d1d;
-}
-
-.cv-pdf-ui #cv-pdf-download:disabled {
-	opacity: 0.5;
-	cursor: not-allowed;
-}
-
-.cv-pdf-ui #cv-pdf-status {
-	margin-top: 10px;
-	line-height: 22px;
-	min-height: 22px;
-}
-
-.cv-pdf-ui .cv-pdf-note {
-	margin-top: 10px;
-	line-height: 22px;
-	font-size: 11px;
-	color: #666;
+#cv-pdf-status.cv-pdf-status-bar:empty {
+	display: none;
 }

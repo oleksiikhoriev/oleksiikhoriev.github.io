@@ -89,14 +89,51 @@ h3 {
 	text-decoration: none;
 }
 
+/* framed “DOWNLOAD CV” in the nav bar */
+#general h3.nav-cv-download {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+	line-height: 1;
+}
+
+#general h3.nav-cv-download button.nav-cv-download-btn {
+	box-sizing: border-box;
+	display: inline-block;
+	padding: 6px 12px 7px;
+	border: 1px solid #6a6a6a;
+	color: #1a1a1a;
+	background: #f7f7f7;
+	letter-spacing: 0.05em;
+	line-height: 1.2;
+	height: auto;
+	min-height: 0;
+	font: inherit;
+	font-size: 12px;
+	font-family: courier, fixed-width, monospace;
+	cursor: pointer;
+	box-shadow: 1px 1px 0 #c8c8c8;
+}
+
+#general h3.nav-cv-download button.nav-cv-download-btn:hover:not(:disabled) {
+	background: #1d1d1d;
+	color: #fff;
+	border-color: #1d1d1d;
+	box-shadow: none;
+}
+
+#general h3.nav-cv-download button.nav-cv-download-btn:disabled {
+	opacity: 0.55;
+	cursor: wait;
+}
+
 /* current page (body.cv-* set per HTML file) */
 body.cv-contact #general h3 a[href="contact.html"],
 body.cv-about #general h3 a[href="about.html"],
 body.cv-achievements #general h3 a[href="achievements.html"],
 body.cv-skills #general h3 a[href="skills.html"],
 body.cv-experience #general h3 a[href="experience.html"],
-body.cv-other #general h3 a[href="other.html"],
-body.cv-pdf-page #general h3 a[href="cv.html"] {
+body.cv-other #general h3 a[href="other.html"] {
 	text-decoration: underline;
 }
 
@@ -154,6 +191,11 @@ h1 a:hover {
 	.info-content .contact-photo-col {
 		align-self: center;
 		margin-top: 12px;
+	}
+
+	#general h3.nav-cv-download button.nav-cv-download-btn {
+		padding: 5px 9px 6px;
+		letter-spacing: 0.04em;
 	}
 }
 
