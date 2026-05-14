@@ -225,6 +225,20 @@ letter-spacing: .06em;
 	line-height: 22px;
 	}
 
+.info-content .other-line {
+	line-height: 22px;
+	margin-bottom: 4px;
+	}
+
+.info-content .other-block-spacer {
+	margin-top: 22px;
+	}
+
+.info-content .other-section-heading {
+	font-weight: bold;
+	margin-bottom: 10px;
+	}
+
 .contact-content {
 	margin-left: 170px;
 	}
