@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CV Oleksii Khoriev | DevOps Engineer</title>
   <link rel="stylesheet" href="style.css" type="text/css" />
+  <link rel="stylesheet" href="cv-pdf.css" type="text/css" />
 </head>
 <body id="main" class="cv-experience">
   <div id="nav">
@@ -16,7 +17,7 @@
       <h3><a href="skills.html">SKILLS</a></h3>
       <h3><a href="experience.html">EXPERIENCE</a></h3>
       <h3><a href="other.html">OTHER</a></h3>
-      <h3><a href="cv.html">CV</a></h3>
+      <h3 class="nav-cv-download"><button type="button" id="cv-pdf-nav-trigger" class="nav-cv-download-btn">DOWNLOAD CV</button></h3>
     </div>
     <div class="info-content">
       <p class="info-section-heading">WORK EXPERIENCE</p>
@@ -87,5 +88,8 @@
       </div>
     </div>
   </div>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" crossorigin="anonymous"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" crossorigin="anonymous"></script>
+  <script defer src="cv-pdf.js"></script>
 </body>
 </html>
