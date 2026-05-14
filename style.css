@@ -1,266 +1,239 @@
-body {
-    font:12px/1.231 arial,helvetica,clean,sans-serif;
+/* --- reset (subset) --- */
+body, div, dl, dt, dd, ul, ol, li, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+	margin: 0;
+	padding: 0;
 }
 
+address, caption, cite, code, dfn, em, strong, th, var, optgroup {
+	font-style: inherit;
+	font-weight: inherit;
+}
+
+li {
+	list-style: none;
+	font-size: 12px;
+	letter-spacing: 0.06em;
+}
+
+caption, th {
+	text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: 12px;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+}
+
+q:before, q:after {
+	content: "";
+}
+
+img {
+	border: 0;
+	max-width: 100%;
+	height: auto;
+}
+
+/* --- base --- */
 html {
-    color:#828282;
-    height: 100%;
+	color: #828282;
+	height: 100%;
+}
+
+body {
+	font: 12px/1.231 courier, fixed-width, monospace;
 }
 
 #main {
-    background-color: transparent;
+	background-color: transparent;
 }
 
-body,div,dl,dt,dd,ul,ol,li,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td {
-	margin:0;
-	padding:0;
-	}
-
-img {
-	border:0;
-	}
-
-address,caption,cite,code,dfn,em,strong,th,var,optgroup {
-	font-style:inherit;
-	font-weight:inherit;
-	}
-
-li {
-	list-style:none;
-
-	font-size: 12px;
-	letter-spacing: .06em;
-	}
-
-caption,th {
-	text-align:left;
-	}
-
-h1,h2,h3,h4,h5,h6 {
-	font-size: 12px;
-	font-weight:normal;
-	margin:0;
-	padding:0;
-	}
-
-q:before,q:after {
-	content:'';
-	}
-
-body {
-	font-family: courier, fixed-width;
-
-	}
-
-img {
-	margin-bottom: 40px;
-	}
-
-ul {
-	line-height: 22px;
-	}
-
+/* --- layout --- */
 #nav h1 {
 	width: 270px;
-	}
-
-#content {
-	position: absolute;
-	left: 300px;
-	top: 50px;
-
-	}
-
-img {
-	padding-left: 50px;
-	}
+}
 
 h1 {
-	font-family: courier, fixed-width;
-	letter-spacing: .06em;
-
-	margin-bottom: 10px;
+	font-family: courier, fixed-width, monospace;
+	letter-spacing: 0.06em;
+	margin: 40px 0 10px 40px;
 	font-size: 12px;
-	margin-top: 40px;
-	margin-left: 40px;
-	}
+}
 
 #general {
-	letter-spacing: .04em;
+	letter-spacing: 0.04em;
 	padding-bottom: 30px;
 	margin-left: 40px;
-	}
-
-#caption {
-	padding-left: 50px;
-	}
-
-a:link {
-	color: #828282;
-	text-decoration: none;
-
-	}
-
-a:visited {
-	color: #828282;
-	text-decoration: none;
-	}
-
-a:hover {
-	color: #828282;
-	text-decoration: underline;
-	}
-
-h1 a:link {
-	color: black;
-	}
-
-h1 a:hover {
-
-	text-decoration: none;
-	}
-h1 a:visited {
-	color: black;
-	}
-
-.copyright {
-	width: 200px;
-	padding-top: 50px;
-	padding-left: 50px;
-	font-family: arial, sans-serif;
-	letter-spacing: .03em;
-	font-size: 9.5px;
-	color: #C9C9C9;
-	}
-
-.pronunciation {
-	padding-left: 10px;
-	font-family: arial, sans-serif;
-	letter-spacing: .03em;
-	font-size: 9.5px;
-	color: #C9C9C9;
-	}
-
-#peace {
-	font-size: 1.9em;
-	padding-left: 5px;
-	position: relative;
-	top: 2px;
-	}
+}
 
 h3 {
-letter-spacing: .06em;
-	}
+	letter-spacing: 0.06em;
+}
 
 #general h3 {
 	display: inline;
 	font-size: 12px;
 	margin-right: 10px;
-	}
+}
 
 #general h3 a:link {
 	height: 15px;
 	text-decoration: none;
-	}
+}
 
-.nav-content {
-	margin-left: 40px;
-	}
+#general h3 a:hover {
+	background: #1d1d1d;
+	color: #fff;
+	text-decoration: none;
+}
 
+/* current page (body.cv-* set per HTML file) */
+body.cv-about #general h3 a[href="about.html"],
+body.cv-achievements #general h3 a[href="achievements.html"],
+body.cv-skills #general h3 a[href="skills.html"],
+body.cv-experience #general h3 a[href="experience.html"],
+body.cv-other #general h3 a[href="other.html"] {
+	text-decoration: underline;
+}
+
+/* --- links --- */
+a:link,
+a:visited {
+	color: #828282;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #828282;
+	text-decoration: underline;
+}
+
+h1 a:link,
+h1 a:visited {
+	color: #000;
+}
+
+h1 a:hover {
+	text-decoration: none;
+}
+
+/* --- main column --- */
 .info-content {
 	margin-left: 120px;
 	width: 500px;
+	max-width: calc(100vw - 140px);
+	box-sizing: border-box;
+	letter-spacing: 0.04em;
+}
+
+@media (max-width: 700px) {
+	h1 {
+		margin-left: 20px;
 	}
 
+	#general {
+		margin-left: 20px;
+	}
+
+	.info-content {
+		margin-left: 20px;
+		width: auto;
+		max-width: calc(100vw - 40px);
+		padding-right: 16px;
+	}
+}
+
+/* --- shared CV section titles --- */
 .info-content .skills-section-title,
 .info-content .experience-section-title {
 	margin-bottom: 10px;
-	}
+}
+
+.info-content .info-section-heading {
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.info-content .info-paragraph {
+	line-height: 22px;
+	margin-bottom: 14px;
+}
+
+.info-content .info-paragraph:last-child {
+	margin-bottom: 0;
+}
+
+.info-content .achievement-bullet {
+	line-height: 22px;
+	margin-bottom: 8px;
+}
+
+.info-content .achievement-bullet:last-child {
+	margin-bottom: 0;
+}
 
 .info-content strong {
 	font-weight: bold;
-	}
+}
 
+/* --- experience --- */
 .info-content .experience-job {
 	margin-bottom: 22px;
-	}
+}
 
 .info-content .experience-job:last-child {
 	margin-bottom: 0;
-	}
+}
 
 .info-content .experience-headline {
 	font-weight: bold;
 	margin-bottom: 3px;
-	}
+}
 
 .info-content .experience-dates {
 	margin-bottom: 8px;
-	}
+}
 
 .info-content .experience-bullet {
 	line-height: 22px;
 	margin-bottom: 6px;
-	}
+}
 
 .info-content .experience-tech {
 	line-height: 22px;
 	margin-top: 6px;
-	}
+}
 
+/* --- skills --- */
 .info-content .skill-group {
 	margin-bottom: 16px;
-	}
+}
 
 .info-content .skill-group:last-child {
 	margin-bottom: 0;
-	}
+}
 
 .info-content .skill-topic {
 	font-weight: bold;
 	margin-bottom: 3px;
-	}
+}
 
 .info-content .skill-keywords {
 	line-height: 22px;
-	}
+}
 
+/* --- other page --- */
 .info-content .other-line {
 	line-height: 22px;
 	margin-bottom: 4px;
-	}
+}
+
+.info-content .other-line:last-child {
+	margin-bottom: 0;
+}
 
 .info-content .other-block-spacer {
 	margin-top: 22px;
-	}
-
-.info-content .other-section-heading {
-	font-weight: bold;
-	margin-bottom: 10px;
-	}
-
-.contact-content {
-	margin-left: 170px;
-	}
-
-body#airia li#airia-a, body#io li#io-a, body#sprinkler li#sprinkler-a, body#windsor li#windsor-a, body#windsor-settee li#windsor-settee-a, body#farm-table li#farm-table-a, body#flashlight li#flashlight-a, body#pressure-pitcher li#pressure-pitcher-a, body#flower li#flower-a, body#arch-chair li#arch-chair-a {
-	text-decoration: underline;
-
-	}
-body#airia h3#projects-a, body#io h3#projects-a, body#sprinkler h3#projects-a, body#windsor h3#projects-a, body#windsor-settee h3#projects-a, body#farm-table h3#projects-a, body#flashlight h3#projects-a, body#pressure-pitcher h3#projects-a, body#flower h3#projects-a, body#arch-chair h3#projects-a  {
-	text-decoration: underline;
-	}
-
-body#projects h3#projects-a, body#info h3#info-a {
-	text-decoration: underline;
-	}
-
-body#info p {
-	margin-bottom: 20px;
-	}
-
-#general h3 a:hover {
-	background: #1d1d1d;
-	color: white;
-	text-decoration: none;
-	}
+}
