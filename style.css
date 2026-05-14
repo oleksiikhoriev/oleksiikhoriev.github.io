@@ -172,6 +172,27 @@ letter-spacing: .06em;
 	width: 500px;
 	}
 
+.info-content .skills-section-title {
+	margin-bottom: 10px;
+	}
+
+.info-content .skill-group {
+	margin-bottom: 16px;
+	}
+
+.info-content .skill-group:last-child {
+	margin-bottom: 0;
+	}
+
+.info-content .skill-topic {
+	font-weight: bold;
+	margin-bottom: 3px;
+	}
+
+.info-content .skill-keywords {
+	line-height: 22px;
+	}
+
 .contact-content {
 	margin-left: 170px;
 	}
