@@ -1,0 +1,207 @@
+/*
+ * PDF-only layout: wider column for fewer wraps; 14px base body text for print.
+ */
+#cv-pdf-root.cv-pdf-root.info-content {
+	position: relative;
+	left: auto;
+	top: auto;
+	margin: 12px auto 12px auto;
+	/* Wider than A4@96dpi → fewer wraps → less vertical height */
+	width: 960px;
+	max-width: 960px;
+	padding: 14px 16px;
+	box-sizing: border-box;
+	background: #fff;
+	color: #111;
+	font-size: 14px;
+	line-height: 1.28;
+	letter-spacing: 0.02em;
+	z-index: 1;
+	overflow: visible;
+}
+
+/* Main section titles */
+#cv-pdf-root .info-section-heading {
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 1.2;
+	margin-bottom: 10px;
+	margin-top: 0;
+}
+
+#cv-pdf-root .cv-pdf-header {
+	text-align: center;
+	margin-bottom: 18px;
+}
+
+#cv-pdf-root .cv-pdf-header h1 {
+	margin: 0 0 2px 0;
+	font-size: 19px;
+	font-weight: bold;
+	letter-spacing: 0.06em;
+	color: #000;
+}
+
+#cv-pdf-root .cv-pdf-header p {
+	margin: 0;
+	font-size: 16px;
+	line-height: 1.25;
+	color: #333;
+}
+
+/* Contact (same layout as site; tuned for print width) */
+#cv-pdf-root .contact-with-photo {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+#cv-pdf-root .contact-text-col {
+	flex: 1;
+	min-width: 0;
+}
+
+#cv-pdf-root .contact-photo-col {
+	flex: 0 0 auto;
+}
+
+#cv-pdf-root .contact-profile-photo {
+	display: block;
+	width: 156px;
+	height: 156px;
+	max-width: 156px;
+	object-fit: cover;
+	object-position: center center;
+	border-radius: 3px;
+}
+
+#cv-pdf-root .cv-pdf-chapter {
+	margin-bottom: 0;
+}
+
+#cv-pdf-root .cv-pdf-chapter + .cv-pdf-chapter {
+	margin-top: 20px;
+}
+
+/* About */
+#cv-pdf-root .info-paragraph {
+	line-height: 1.32;
+	margin-bottom: 10px;
+}
+
+#cv-pdf-root .info-paragraph:last-child {
+	margin-bottom: 0;
+}
+
+/* Achievements */
+#cv-pdf-root .achievement-bullet {
+	line-height: 1.3;
+	margin-bottom: 7px;
+}
+
+#cv-pdf-root .achievement-bullet:last-child {
+	margin-bottom: 0;
+}
+
+/* Skills */
+#cv-pdf-root .skill-group {
+	margin-bottom: 12px;
+}
+
+#cv-pdf-root .skill-group:last-child {
+	margin-bottom: 0;
+}
+
+#cv-pdf-root .skill-topic {
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 5px;
+	line-height: 1.25;
+}
+
+#cv-pdf-root .skill-keywords {
+	line-height: 1.28;
+	margin-bottom: 4px;
+	font-weight: normal;
+	font-size: 14px;
+}
+
+/* Experience */
+#cv-pdf-root .experience-job {
+	margin-bottom: 16px;
+}
+
+#cv-pdf-root .experience-headline {
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+
+#cv-pdf-root .experience-dates {
+	margin-bottom: 7px;
+	font-size: 13px;
+}
+
+#cv-pdf-root .experience-bullet {
+	line-height: 1.3;
+	margin-bottom: 6px;
+	font-size: 14px;
+}
+
+#cv-pdf-root .experience-tech {
+	margin-top: 8px;
+	font-size: 13px;
+	line-height: 1.3;
+}
+
+/* Other (certs / education) */
+#cv-pdf-root .other-line {
+	line-height: 1.32;
+	margin-bottom: 8px;
+	font-size: 14px;
+}
+
+#cv-pdf-root .other-line:last-child {
+	margin-bottom: 0;
+}
+
+/* UI on cv.html */
+.cv-pdf-ui {
+	margin-top: 8px;
+}
+
+.cv-pdf-ui #cv-pdf-download {
+	margin-top: 12px;
+	padding: 8px 14px;
+	font-family: courier, fixed-width, monospace;
+	font-size: 12px;
+	cursor: pointer;
+	border: 1px solid #828282;
+	background: #fff;
+	color: #111;
+}
+
+.cv-pdf-ui #cv-pdf-download:hover:not(:disabled) {
+	background: #1d1d1d;
+	color: #fff;
+	border-color: #1d1d1d;
+}
+
+.cv-pdf-ui #cv-pdf-download:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+.cv-pdf-ui #cv-pdf-status {
+	margin-top: 10px;
+	line-height: 22px;
+	min-height: 22px;
+}
+
+.cv-pdf-ui .cv-pdf-note {
+	margin-top: 10px;
+	line-height: 22px;
+	font-size: 11px;
+	color: #666;
+}
