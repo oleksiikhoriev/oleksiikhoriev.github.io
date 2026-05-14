@@ -1,0 +1,112 @@
+/*
+ * PDF source block: in normal flow at end of body while rendering so
+ * html2canvas gets a real layout box (avoid fixed + overlay quirks).
+ */
+#cv-pdf-root.cv-pdf-root.info-content {
+	position: relative;
+	left: auto;
+	top: auto;
+	margin: 24px auto 48px auto;
+	width: 794px;
+	max-width: calc(100vw - 48px);
+	padding: 28px 32px;
+	box-sizing: border-box;
+	background: #fff;
+	color: #111;
+	letter-spacing: 0.02em;
+	z-index: 1;
+	overflow: visible;
+	border: 1px solid #ddd;
+}
+
+/* Main section titles (About me, Technical skills, Work experience, …) */
+.cv-pdf-root .info-section-heading {
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 1.35;
+}
+
+/* Skill category headings (bold); keyword lines stay normal weight */
+.cv-pdf-root .skill-topic {
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.cv-pdf-root .cv-pdf-header {
+	text-align: center;
+	margin-bottom: 24px;
+}
+
+.cv-pdf-root .cv-pdf-header h1 {
+	margin: 0 0 6px 0;
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: 0.06em;
+	color: #000;
+}
+
+.cv-pdf-root .cv-pdf-header p {
+	margin: 0;
+	font-size: 11px;
+	color: #333;
+}
+
+.cv-pdf-root .cv-pdf-chapter {
+	margin-bottom: 0;
+}
+
+.cv-pdf-root .cv-pdf-chapter + .cv-pdf-chapter {
+	margin-top: 16px;
+}
+
+.cv-pdf-root .experience-job {
+	margin-bottom: 12px;
+}
+
+.cv-pdf-root .skill-group {
+	margin-bottom: 10px;
+}
+
+.cv-pdf-root .achievement-bullet {
+	margin-bottom: 6px;
+}
+
+/* UI on cv.html */
+.cv-pdf-ui {
+	margin-top: 8px;
+}
+
+.cv-pdf-ui #cv-pdf-download {
+	margin-top: 12px;
+	padding: 8px 14px;
+	font-family: courier, fixed-width, monospace;
+	font-size: 12px;
+	cursor: pointer;
+	border: 1px solid #828282;
+	background: #fff;
+	color: #111;
+}
+
+.cv-pdf-ui #cv-pdf-download:hover:not(:disabled) {
+	background: #1d1d1d;
+	color: #fff;
+	border-color: #1d1d1d;
+}
+
+.cv-pdf-ui #cv-pdf-download:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+.cv-pdf-ui #cv-pdf-status {
+	margin-top: 10px;
+	line-height: 22px;
+	min-height: 22px;
+}
+
+.cv-pdf-ui .cv-pdf-note {
+	margin-top: 10px;
+	line-height: 22px;
+	font-size: 11px;
+	color: #666;
+}

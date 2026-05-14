@@ -94,7 +94,8 @@ body.cv-about #general h3 a[href="about.html"],
 body.cv-achievements #general h3 a[href="achievements.html"],
 body.cv-skills #general h3 a[href="skills.html"],
 body.cv-experience #general h3 a[href="experience.html"],
-body.cv-other #general h3 a[href="other.html"] {
+body.cv-other #general h3 a[href="other.html"],
+body.cv-pdf-page #general h3 a[href="cv.html"] {
 	text-decoration: underline;
 }
 
@@ -145,12 +146,7 @@ h1 a:hover {
 	}
 }
 
-/* --- shared CV section titles --- */
-.info-content .skills-section-title,
-.info-content .experience-section-title {
-	margin-bottom: 10px;
-}
-
+/* --- shared CV section titles (page lead headings) --- */
 .info-content .info-section-heading {
 	font-weight: bold;
 	margin-bottom: 10px;

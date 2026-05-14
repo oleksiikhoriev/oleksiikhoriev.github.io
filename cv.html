@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Download CV (PDF) | Oleksii Khoriev</title>
+  <link rel="stylesheet" href="style.css" type="text/css" />
+  <link rel="stylesheet" href="cv-pdf.css" type="text/css" />
+</head>
+<body id="main" class="cv-pdf-page">
+  <div id="nav">
+    <h1><a href="index.html">OLEKSII KHORIEV</a></h1>
+    <div id="general">
+      <h3><a href="about.html">ABOUT</a></h3>
+      <h3><a href="achievements.html">ACHIEVEMENTS</a></h3>
+      <h3><a href="skills.html">SKILLS</a></h3>
+      <h3><a href="experience.html">EXPERIENCE</a></h3>
+      <h3><a href="other.html">OTHER</a></h3>
+      <h3><a href="cv.html">CV PDF</a></h3>
+    </div>
+    <div class="info-content cv-pdf-ui">
+      <p class="info-section-heading">DOWNLOAD CV (PDF)</p>
+      <p class="info-paragraph">This builds one PDF from the same HTML files as the site: About, Achievements, Skills, Experience, Certifications, then Education (in that order). Use it for an up-to-date export after you edit the pages.</p>
+      <p class="cv-pdf-note">Requires opening this site over HTTP(S). If you opened files from disk (<code>file://</code>), use a local server or the live GitHub Pages URL instead.</p>
+      <button type="button" id="cv-pdf-download">Download Oleksii_Khoriev_CV.pdf</button>
+      <p id="cv-pdf-status" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" crossorigin="anonymous"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" crossorigin="anonymous"></script>
+  <script defer src="cv-pdf.js"></script>
+</body>
+</html>
