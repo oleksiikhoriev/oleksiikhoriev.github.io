@@ -1,74 +1,140 @@
 /*
- * PDF source block: in normal flow at end of body while rendering so
- * html2canvas gets a real layout box (avoid fixed + overlay quirks).
+ * PDF-only layout: wider column for fewer wraps; 14px base body text for print.
  */
 #cv-pdf-root.cv-pdf-root.info-content {
 	position: relative;
 	left: auto;
 	top: auto;
-	margin: 24px auto 48px auto;
-	width: 794px;
-	max-width: calc(100vw - 48px);
-	padding: 28px 32px;
+	margin: 12px auto 32px auto;
+	/* Wider than A4@96dpi → fewer wraps → less vertical height */
+	width: 960px;
+	max-width: 960px;
+	padding: 14px 16px;
 	box-sizing: border-box;
 	background: #fff;
 	color: #111;
+	font-size: 14px;
+	line-height: 1.28;
 	letter-spacing: 0.02em;
 	z-index: 1;
 	overflow: visible;
-	border: 1px solid #ddd;
 }
 
-/* Main section titles (About me, Technical skills, Work experience, …) */
-.cv-pdf-root .info-section-heading {
-	font-size: 14px;
-	font-weight: bold;
-	line-height: 1.35;
-}
-
-/* Skill category headings (bold); keyword lines stay normal weight */
-.cv-pdf-root .skill-topic {
-	font-size: 13px;
-	font-weight: bold;
-}
-
-.cv-pdf-root .cv-pdf-header {
-	text-align: center;
-	margin-bottom: 24px;
-}
-
-.cv-pdf-root .cv-pdf-header h1 {
-	margin: 0 0 6px 0;
+/* Main section titles */
+#cv-pdf-root .info-section-heading {
 	font-size: 16px;
+	font-weight: bold;
+	line-height: 1.2;
+	margin-bottom: 10px;
+	margin-top: 0;
+}
+
+#cv-pdf-root .cv-pdf-header {
+	text-align: center;
+	margin-bottom: 18px;
+}
+
+#cv-pdf-root .cv-pdf-header h1 {
+	margin: 0 0 2px 0;
+	font-size: 19px;
 	font-weight: bold;
 	letter-spacing: 0.06em;
 	color: #000;
 }
 
-.cv-pdf-root .cv-pdf-header p {
+#cv-pdf-root .cv-pdf-header p {
 	margin: 0;
-	font-size: 11px;
+	font-size: 13px;
 	color: #333;
 }
 
-.cv-pdf-root .cv-pdf-chapter {
+#cv-pdf-root .cv-pdf-chapter {
 	margin-bottom: 0;
 }
 
-.cv-pdf-root .cv-pdf-chapter + .cv-pdf-chapter {
-	margin-top: 16px;
+#cv-pdf-root .cv-pdf-chapter + .cv-pdf-chapter {
+	margin-top: 20px;
 }
 
-.cv-pdf-root .experience-job {
-	margin-bottom: 12px;
-}
-
-.cv-pdf-root .skill-group {
+/* About */
+#cv-pdf-root .info-paragraph {
+	line-height: 1.32;
 	margin-bottom: 10px;
 }
 
-.cv-pdf-root .achievement-bullet {
+#cv-pdf-root .info-paragraph:last-child {
+	margin-bottom: 0;
+}
+
+/* Achievements */
+#cv-pdf-root .achievement-bullet {
+	line-height: 1.3;
+	margin-bottom: 7px;
+}
+
+#cv-pdf-root .achievement-bullet:last-child {
+	margin-bottom: 0;
+}
+
+/* Skills */
+#cv-pdf-root .skill-group {
+	margin-bottom: 12px;
+}
+
+#cv-pdf-root .skill-group:last-child {
+	margin-bottom: 0;
+}
+
+#cv-pdf-root .skill-topic {
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 5px;
+	line-height: 1.25;
+}
+
+#cv-pdf-root .skill-keywords {
+	line-height: 1.28;
+	margin-bottom: 4px;
+	font-weight: normal;
+	font-size: 14px;
+}
+
+/* Experience */
+#cv-pdf-root .experience-job {
+	margin-bottom: 16px;
+}
+
+#cv-pdf-root .experience-headline {
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+
+#cv-pdf-root .experience-dates {
+	margin-bottom: 7px;
+	font-size: 13px;
+}
+
+#cv-pdf-root .experience-bullet {
+	line-height: 1.3;
 	margin-bottom: 6px;
+	font-size: 14px;
+}
+
+#cv-pdf-root .experience-tech {
+	margin-top: 8px;
+	font-size: 13px;
+	line-height: 1.3;
+}
+
+/* Other (certs / education) */
+#cv-pdf-root .other-line {
+	line-height: 1.32;
+	margin-bottom: 8px;
+	font-size: 14px;
+}
+
+#cv-pdf-root .other-line:last-child {
+	margin-bottom: 0;
 }
 
 /* UI on cv.html */

@@ -37,7 +37,7 @@
     var h1 = document.createElement("h1");
     h1.textContent = "OLEKSII KHORIEV";
     var sub = document.createElement("p");
-    sub.textContent = "Senior DevOps / Platform Engineer";
+    sub.textContent = "Senior DevOps / SRE / Platform Engineer";
     header.appendChild(h1);
     header.appendChild(sub);
     root.appendChild(header);
@@ -91,9 +91,10 @@
 
     var pageWidth = pdf.internal.pageSize.getWidth();
     var pageHeight = pdf.internal.pageSize.getHeight();
-    var margin = 8;
-    var usableW = pageWidth - 2 * margin;
-    var usableH = pageHeight - 2 * margin;
+    var marginX = 16;
+    var marginY = 8;
+    var usableW = pageWidth - 2 * marginX;
+    var usableH = pageHeight - 2 * marginY;
 
     var cw = canvas.width;
     var ch = canvas.height;
@@ -133,7 +134,7 @@
       if (pageIndex > 0) {
         pdf.addPage();
       }
-      pdf.addImage(sliceData, "JPEG", margin, margin, usableW, sliceHmm);
+      pdf.addImage(sliceData, "JPEG", marginX, marginY, usableW, sliceHmm);
 
       yPx += slicePx;
       pageIndex += 1;
