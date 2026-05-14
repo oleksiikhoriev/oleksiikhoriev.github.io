@@ -172,8 +172,40 @@ letter-spacing: .06em;
 	width: 500px;
 	}
 
-.info-content .skills-section-title {
+.info-content .skills-section-title,
+.info-content .experience-section-title {
 	margin-bottom: 10px;
+	}
+
+.info-content strong {
+	font-weight: bold;
+	}
+
+.info-content .experience-job {
+	margin-bottom: 22px;
+	}
+
+.info-content .experience-job:last-child {
+	margin-bottom: 0;
+	}
+
+.info-content .experience-headline {
+	font-weight: bold;
+	margin-bottom: 3px;
+	}
+
+.info-content .experience-dates {
+	margin-bottom: 8px;
+	}
+
+.info-content .experience-bullet {
+	line-height: 22px;
+	margin-bottom: 6px;
+	}
+
+.info-content .experience-tech {
+	line-height: 22px;
+	margin-top: 6px;
 	}
 
 .info-content .skill-group {
